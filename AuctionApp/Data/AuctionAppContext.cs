@@ -14,6 +14,7 @@ namespace AuctionApp.Data
         {
         }
 
-        public DbSet<AuctionApp.Models.Product> Product { get; set; } = default!;
+        public DbSet<Product> Product { get; set; } = default!;
+        public DbSet<Negotiation> Negotiation { get; set; } = default!;
     }
 }

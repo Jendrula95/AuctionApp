@@ -101,6 +101,7 @@ namespace AuctionApp.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(int id, [Bind("ProductID,Name,Description,Price,Category")] Product product)
         {
+            
             if (id != product.ProductID)
             {
                 return NotFound();

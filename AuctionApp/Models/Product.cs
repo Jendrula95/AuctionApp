@@ -26,9 +26,9 @@ namespace AuctionApp.Models
         [Required(ErrorMessage = "Prosze określić kategorię.")]
         public string Category { get; set; }
 
-  
+        public Negotiation negotiation;
 
-       
+        public Client client;
 
     }
 }

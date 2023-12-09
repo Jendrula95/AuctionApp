@@ -1,4 +1,5 @@
-﻿@model AuctionApp.Models.Product
+﻿
+@model AuctionApp.Models.Product
 
 @{
     ViewData["Title"] = "Edit";
@@ -13,15 +14,24 @@
             <input type="hidden" asp-for="ProductID" />
             <div class="form-group">
                 <label asp-for="Name" class="control-label"></label>
-                <input asp-for="Name" class="form-control" />
-                <span asp-validation-for="Name" class="text-danger"></span>
+                <input asp-for="Name" class="form-control" readonly/>
+               
             </div>
             <div class="form-group">
                 <label asp-for="Price" class="control-label"></label>
-                <input asp-for="Price" class="form-control" />
-                <span asp-validation-for="Price" class="text-danger"></span>
+                <input asp-for="Price" class="form-control" readonly />
+               
             </div>
-           
+            <div class="form-group">
+                <label asp-for="negotiation.ProposedPrice" class="control-label"></label>
+                <input asp-for="negotiation.ProposedPrice" class="form-control" />
+                <span asp-validation-for="negotiation.ProposedPrice" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="client.Email" class="control-label"></label>
+                <input asp-for="client.Email" class="form-control" />
+                <span asp-validation-for="client.Email" class="text-danger"></span>
+            </div>
             <div class="form-group">
                 <input type="submit" value="Złóż ofertę" class="btn btn-primary" />
             </div>
